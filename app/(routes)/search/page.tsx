@@ -1,12 +1,12 @@
-'use client'
-import { useSearchParams } from 'next/navigation'
-import React from 'react'
+import SearchClient from "@/components/search/SearchClient";
+import React, { Suspense } from "react";
 
-const SearchPage = () => {
-    const searchParams = useSearchParams();
+const SearchPage: React.FC = () => {
   return (
-    <div>{searchParams.get("query")}</div>
-  )
-}
+    <Suspense fallback={<div>Loading...</div>}>
+      <SearchClient />
+    </Suspense>
+  );
+};
 
-export default SearchPage
+export default SearchPage;
