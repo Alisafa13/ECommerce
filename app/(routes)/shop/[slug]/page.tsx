@@ -1,11 +1,7 @@
 import React from 'react'
 
-interface ShopDetailsProps{
-    params:{
-        slug:string;
-    }
-}
-const ShopDetails = ({params}:ShopDetailsProps) => {
+import {PageParams} from '@/types/page'
+const ShopDetails = ({params}:PageParams) => {
   return (
     <div>{params.slug}</div>
   )
